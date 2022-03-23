@@ -1,31 +1,26 @@
-<div id="sect1" class="container" >
+<div id="header" class="container" >
+  <div id="div-title">
+    <h1 id="title">Travel Map</h1>
+  </div>
 
-  <mat-grid-list cols="2" rowHeight="100px" rowWidth ="1000px">
-
-    <mat-grid-tile cols="3">
-      <h1 class="current-location">Travel Map </h1>
-    </mat-grid-tile>
-    <mat-grid-tile class="card1" >
-      <div>
-        <mat-card >
-          <div style="width:200px">
-            <h3>
-              Current Location :
-            </h3>
-          </div>
-          <div style="width:100px">
-            <input class="testfeild">
-          </div>
-
-        </mat-card>
-      </div>
-
-    </mat-grid-tile>
-
-  </mat-grid-list>
-
-  <mat-form-field class="example-form-field" appearance="fill">
-  </mat-form-field>
+  <div id="div-search-box">
+    <mat-card style="width: fit-content;">
+      <form class="example-form">
+        <mat-form-field class="example-full-width" appearance="fill" style="width: 500px">
+          <mat-label>Message</mat-label>
+          <input matInput #message maxlength="256" placeholder="Ex. Deniyaya Mountains">
+          <mat-hint align="start"><strong>Where do you want to go?</strong> </mat-hint>
+          <mat-hint align="end">{{message.value.length}} / 256</mat-hint>
+        </mat-form-field>
+      </form>
+    </mat-card>
+  </div>
 </div>
+
+<br>
+
+<mat-card style="margin: 5px">
+  <p>map goes here</p>
+</mat-card>
 
 
